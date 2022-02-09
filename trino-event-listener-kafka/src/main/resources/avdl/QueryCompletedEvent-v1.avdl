@@ -1,0 +1,12 @@
+@namespace("com.trivadis.trino.avro")
+protocol QueryCompletedEventProtocol {
+
+	record QueryCompletedEvent {
+		string queryType;
+		string query;
+		string queryID;
+		timestamp_ms queryStartTime;
+		timestamp_ms queryEndTime;
+		long outputRows;
+	}
+}

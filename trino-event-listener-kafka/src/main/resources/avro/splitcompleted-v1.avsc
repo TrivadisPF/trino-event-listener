@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "namespace": "io.trino.plugin.eventstream",
+  "name": "SplitCompletedEventV1",
+  "fields": [
+    { "name": "QueryType", "type": "string", "doc": "Query Run Type" },
+    { "name": "QueryID", "type": "string", "doc": "Query ID" },
+    { "name": "QueryStartTime", "type": "string", "doc": "Query Created Time"},
+    { "name": "QueryEndTime", "type": "string", "doc": "Query End Time"}
+  ]
+}

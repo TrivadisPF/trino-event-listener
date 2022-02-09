@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="TrinoQueryLog" packages="">
+    <Appenders>
+        <RollingFile name="JsonRollingFile">
+            <FileName>/tmp/trino-event-listener-kafka.log</FileName>
+            <FilePattern>/var/log/trino/%d{yyyy-MM-dd-hh}-%i.log</FilePattern>
+            <JsonLayout charset="UTF-8" includeStacktrace="false"
+                        compact="true" eventEol="true" objectMessageAsJsonObject="true"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="JsonRollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
+

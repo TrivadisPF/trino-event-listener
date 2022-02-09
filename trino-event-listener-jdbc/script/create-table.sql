@@ -1,0 +1,23 @@
+
+CREATE TABLE completed_queries (query_id               text,
+                              catalog                  text,
+                              schema                   text,
+                              principal                text,
+                              user_agent               text,
+                              client_info              text,
+                              source                   text,
+                              environment              text,
+                              remote_client_address    text,
+                              server_version           text,
+                              usr                      text,
+                              user_groups              text,
+                              query_state              text,
+                              query                    text,
+                              query_plan               text,
+                              total_rows               bigint,
+                              total_bytes              bigint,
+                              create_time              timestamp,
+                              end_time                 timestamp,
+                              accessed_metadata        text,
+                              query_type               text
+);
